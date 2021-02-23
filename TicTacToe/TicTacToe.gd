@@ -1,50 +1,35 @@
 extends Node2D
 
 onready var xo_scene = preload("res://XO/XO.tscn")
+onready var logic: XOLogic = $XOLogic
 
-onready var score_label = $Score
+#onready var score_label = $Score
 var x_win_score = 0
 var o_win_score = 0
 
-var current = "X"
-
-var board = [
-	['-', '-', '-'],
-	['-', '-', '-'],
-	['-', '-', '-']]
-
 func _ready():
-	update_score_label_text()
+	#update_score_label_text()
+	pass
 	
-func update_score_label_text():
-	score_label.text = "[X] " + String(x_win_score) + ":" + String(o_win_score) + "[O]"
+#func update_score_label_text():
+#	score_label.text = "[X] " + String(x_win_score) + ":" + String(o_win_score) + "[O]"
 
 
 func instance_xo(pos: Vector2):
 	var node = xo_scene.instance()
 	add_child(node)
 	node.position = pos
-	if current == "X":
+	if self.logic.symbol == "X":
 		node.playCross()
 	else:
 		node.playCircle()
 
-# Chane current var to X if actually is O and O if actually is X
-func next_move():
-	if current == "X":
-		current = "O"
-	else:
-		current = "X"
-
-# update board
-func update_board(x: int, y: int):
-	board[x][y] = current
 
 func make_move(x: int, y: int, pos: Vector2):
-	if board[x][y] == '-':
-		update_board(x, y)
-		instance_xo(pos)
-		next_move()
+	if self.logic.in_game:
+		if self.logic.board[x][y] == '-':
+			instance_xo(pos)
+			self.logic.set_field(x, y)
 
 func _on_LeftUp_clicked(pos):
 	make_move(0, 0, pos)
@@ -79,3 +64,8 @@ func _on_Down_clicked(pos):
 
 func _on_RightDown_clicked(pos):
 	make_move(2, 2, pos)
+
+
+func _on_XOLogic_win(winner, x, y, type):
+	print("Win: " + winner)
+	pass # Replace with function body.
