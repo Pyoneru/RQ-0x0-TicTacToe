@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "XOLogic",
 "language": "GDScript",
-"path": "res://XOLogic.gd"
+"path": "res://Scripts/XOLogic.gd"
 } ]
 _global_script_class_icons={
 "XOLogic": ""
@@ -21,8 +21,9 @@ _global_script_class_icons={
 [application]
 
 config/name="TicTacToe"
-run/main_scene="res://TicTacToe.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://Scenes/TicTacToe.tscn"
+config/icon="res://Images/logo.png"
+config/windows_native_icon="res://Images/logo.png"
 
 [display]
 
