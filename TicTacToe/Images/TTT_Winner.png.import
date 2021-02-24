@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Winner.png-5f6ddb100cf128020ba344afaec897ba.stex"
+path="res://.import/TTT_Winner.png-ee038e53ef4d863572698622c3cc3644.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Winner.png"
-dest_files=[ "res://.import/Winner.png-5f6ddb100cf128020ba344afaec897ba.stex" ]
+source_file="res://Images/TTT_Winner.png"
+dest_files=[ "res://.import/TTT_Winner.png-ee038e53ef4d863572698622c3cc3644.stex" ]
 
 [params]
 

@@ -23,7 +23,7 @@ _global_script_class_icons={
 config/name="TicTacToe"
 run/main_scene="res://Scenes/TicTacToe.tscn"
 config/icon="res://Images/logo.png"
-config/windows_native_icon="res://Images/logo.png"
+config/windows_native_icon="res://Images/logo.ico"
 
 [display]
 

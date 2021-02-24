@@ -82,3 +82,8 @@ func _on_XOLogic_win(winner, x, y, type):
 		o_win_score += 1
 	update_score_label_text()
 	winner_node.visible = true
+
+
+func _on_XOLogic_draw():
+	winner_node.set_draw()
+	winner_node.visible = true

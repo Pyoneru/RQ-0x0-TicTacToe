@@ -79,4 +79,5 @@ __meta__ = {
 [connection signal="clicked" from="Board/LeftDown" to="." method="_on_LeftDown_clicked"]
 [connection signal="clicked" from="Board/Down" to="." method="_on_Down_clicked"]
 [connection signal="clicked" from="Board/RightDown" to="." method="_on_RightDown_clicked"]
+[connection signal="draw" from="XOLogic" to="." method="_on_XOLogic_draw"]
 [connection signal="win" from="XOLogic" to="." method="_on_XOLogic_win"]

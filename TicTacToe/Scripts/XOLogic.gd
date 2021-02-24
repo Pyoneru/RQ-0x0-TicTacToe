@@ -57,6 +57,9 @@ func flip() -> String:
 # Signal to notification about win
 signal win(winner, x, y, type)
 
+# Signal to notification about draw
+signal draw
+
 # Check all possible win and emit singal if found any win
 # return false if not found win, and true in otherwise
 func win_check(x: int, y: int) -> bool:
@@ -75,9 +78,19 @@ func win_check(x: int, y: int) -> bool:
 		self.in_game = false
 		emit_signal("win", board[x][y], x, y, win_type)
 		return true
+	elif check_draw():
+		self.in_game = false
+		emit_signal("draw")
 		
 	return false
 
+# Check if is draw
+func check_draw() -> bool:
+	for y in range(3):
+		for x in range(3):
+			if board[x][y] == "-":
+				return false
+	return true			
 
 # Check if all fields in the same row have the same symbol(xo) 
 func horizontal_win_check(x: int, y: int, xo: String):
