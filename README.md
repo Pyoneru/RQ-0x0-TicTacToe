@@ -17,3 +17,19 @@ Krita (Graphics)
 # Font
 42 - Utopia Font: Dale Harris
 Downloaded from [101freefonts](https://www.1001freefonts.com/designer-utopia-fonts-fontlisting.php)
+
+```
+Godot Engine v3.2.3.stable.offical -> Available on [Steam](https://store.steampowered.com/app/404790/Godot_Engine/)
+GDScript
+Krita (Graphics)
+```
+
+## Font
+```
+42 - Utopia Font: Dale Harris
+Downloaded from [101freefonts](https://www.1001freefonts.com/designer-utopia-fonts-fontlisting.php)
+```
+
+## Run
+1. Import project from Godot Engine
+2. Use release pack(available on Windows)
